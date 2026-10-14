@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Alternative to build.bat for people with the .NET SDK / Visual Studio:  dotnet build -c Release  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>GlassClock</AssemblyName>
+    <RootNamespace>GlassClock</RootNamespace>
+    <NoWarn>CS0618;CS0168;CS0219;CS0414</NoWarn>
+    <Version>3.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- fonts are embedded and extracted on first run (see FontBook.ExtractBundled) -->
+    <EmbeddedResource Include="fonts\*.ttf" LogicalName="%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
